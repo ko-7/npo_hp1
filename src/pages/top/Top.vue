@@ -10,31 +10,52 @@
             <!-- 以下コンテンツ(背景白部分の全体) -->
             <v-card tile class="pa-5" width="100%" height="100%" flat>
                 <!-- ヘッダー -->
-                <p class="font-weight-medium mb-0">空き家のリノベーション</p>
+                <p class="font-weight-medium mb-0">【一言メッセージ】</p>
                 <v-divider></v-divider>
                 <v-app-bar color="white" flat class="my-5">
-                    <v-toolbar-title>【ロゴマーク】</v-toolbar-title>
+                    <v-toolbar-title><a href="https://master.d25akkonz7i73i.amplifyapp.com">【ロゴマーク】</a></v-toolbar-title>
                     <v-spacer></v-spacer>
                     <v-toolbar-items>
-                        <v-btn text>
+                        <v-btn text class="px-1">
+                            <div>
+                                <v-icon class="mb-3">mdi-account</v-icon>
+                                <v-spacer></v-spacer>
+                                【法人名】とは
+                            </div>
+                        </v-btn>
+                        <v-btn text class="px-5">
                             <div>
                                 <v-icon class="mb-3">mdi-pencil</v-icon>
                                 <v-spacer></v-spacer>
-                                プロジェクト
+                                活動内容
                             </div>
                         </v-btn>
-                        <v-btn text>
+                        <v-btn text class="px-3">
+                            <div>
+                                <v-icon class="mb-3">mdi-home</v-icon>
+                                <v-spacer></v-spacer>
+                                家を借りる
+                            </div>
+                        </v-btn>
+                        <v-btn text class="px-2">
+                            <div>
+                                <v-icon class="mb-3">mdi-home-outline</v-icon>
+                                <v-spacer></v-spacer>
+                                家を活用する
+                            </div>
+                        </v-btn>
+                        <!-- <v-btn text>
                             <div>
                                 <v-icon class="mb-3">mdi-bullhorn</v-icon>
                                 <v-spacer></v-spacer>
-                                ニュース
+                                お知らせ
                             </div>
-                        </v-btn>
-                        <v-btn text>
+                        </v-btn> -->
+                        <v-btn text class="px-2">
                             <div>
                                 <v-icon class="mb-3">mdi-email</v-icon>
                                 <v-spacer></v-spacer>
-                                コンタクト
+                                お問い合わせ
                             </div>
                         </v-btn>
                     </v-toolbar-items>
@@ -50,6 +71,10 @@
                     transition="fade-transition"
                 ></v-carousel-item>
                 </v-carousel>
+
+
+
+
             </v-card>
   
             
