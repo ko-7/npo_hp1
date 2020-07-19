@@ -20,7 +20,7 @@
                             <div>
                                 <v-icon class="mb-3">mdi-account</v-icon>
                                 <v-spacer></v-spacer>
-                                ➂組織
+                                  ➂組織
                             </div>
                         </v-btn>
                         <v-btn text class="px-1 text-caption">
@@ -34,36 +34,36 @@
                 </v-app-bar>
 
                 <br>
+                
+                <!-- 画像 -->
+                <v-card class="my-5" width="100%" tile>
+                  <v-img src="@/assets/organization.png"></v-img>
+                </v-card>
 
-                <!-- 画像スライド -->
-                <v-carousel class="my-5" hide-delimiter-background show-arrows-on-hover>
-                    <v-carousel-item
-                    v-for="(item,i) in items"
-                    :key="i"
-                    :src="item.src"
-                    reverse-transition="fade-transition"
-                    transition="fade-transition"
-                ></v-carousel-item>
-                </v-carousel>
-
-                <!-- 活動内容紹介 -->
+                <!-- 組織紹介 -->
                 <v-card flat class="my-5">
                   <v-divider color="#BDBDBD"></v-divider>
-                    <p class="my-1">活動内容</p>
+                    <p class="my-1">いわたタウンマネジメントとは</p>
                   <v-divider color="#BDBDBD"></v-divider>
-                  <h4 class="mb-1">フリーマーケット</h4>
-                  <p class="mb-0">磐田市内でフリーマーケットを企画し、定期的に開催しています。</p>
-                  <p class="mb-0"></p>
+                  <h4 class="mb-1"></h4>
+                  <p class="mb-0">磐田市内の生活者、商店、企業、行政、他各種団体に対して、中心市街地と郊外市街地の連携と地域の個人・組織の枠を超えた人財の融合によるタウンマネジメントに関する事業を行い、先人が培ってきた歴史や文化、風土を最大限に活かし住みよい地域環境の創造と活力ある地域経済の発展に寄与することを目的とする。</p>
+                  <p class="mb-0"><a href="https://www.npo-homepage.go.jp/npoportal/document/022000922/teikan/1/%E5%AE%9A%E6%AC%BE.pdf">定款</a></p>
                 </v-card>
                 <v-card flat class="my-5">
                   <v-divider color="#BDBDBD"></v-divider>
-                    <p class="my-1">今後の予定</p>
+                    <p class="my-1">事業報告書</p>
                   <v-divider color="#BDBDBD"></v-divider>
-                  <h4 class="mb-1">空き家のリノベーション</h4>
-                  <p class="mb-0">ご自身が「暮らすため」あるいは「賃貸や売却で利益を得るため」といった理由から、空き家のリフォーム・リノベーションを検討する方が増えつつあります。「古い空き家を所有し続けることにより、固定資産税が高くなってしまわないか」と不安に思う方もいらっしゃるでしょう。とは言え、リフォームの際には工事費用がいくらかかるか、またどのような工事が必要か、心配な方もきっと多いはず。</p>
-                  <p>そこで、私たちいわたタウンマネジメントでそういった方々をサポートしたいと思っています。</p>
+                  <p class="my-3">
+                    <a href="https://www.npo-homepage.go.jp/npoportal/document/022000922/hokoku/201870/2018%E5%B9%B4%E5%BA%A6%E4%BA%8B%E6%A5%AD%E5%A0%B1%E5%91%8A%E6%9B%B8%E7%AD%89.pdf">
+                      2018年度事業報告書等
+                    </a>
+                  </p>
+                  <p>
+                    <a href="https://www.npo-homepage.go.jp/npoportal/document/022000922/hokoku/201770/2017%E5%B9%B4%E5%BA%A6%E4%BA%8B%E6%A5%AD%E5%A0%B1%E5%91%8A%E6%9B%B8%E7%AD%89.pdf">
+                      2017年度事業報告書等
+                    </a>
+                  </p>
                 </v-card>
-
 
                 <!-- フッター -->
                 <v-divider class="mt-5" color="#BDBDBD"></v-divider>
@@ -87,21 +87,6 @@
   export default {
     data: () => ({
       language: null,
-    //↓ スライドに表示させる画像のパス
-      items: [
-          {
-            src: require('@/assets/activity1.jpg'),
-          },
-          {
-            src: require('@/assets/activity2.jpg'),
-          },
-          {
-            src: require('@/assets/activity3.jpg'),
-          },
-          {
-            src: require('@/assets/activity4.jpg'),
-          },
-        ],
     }),
   }
 </script>

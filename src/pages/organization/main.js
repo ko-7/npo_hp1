@@ -1,6 +1,6 @@
 // TOP main.js
 import Vue from 'vue';
-import Users from './Users.vue';
+import Organization from './Organization.vue';
 import vuetify from '@/plugins/vuetify';
 
 import Amplify, * as AmplifyModules from 'aws-amplify' // 追記
@@ -14,5 +14,5 @@ Vue.config.productionTip = false;
 
 new Vue({
   vuetify,
-  render: h => h(Users),
+  render: h => h(Organization),
 }).$mount('#app');

@@ -9,10 +9,10 @@ module.exports = {
       "template": "public/index.html",
       "filename": "index.html"
     },
-    "users": {
-      "entry": "src/pages/users/main.js",
-      "template": "public/users.html",
-      "filename": "users.html"
+    "organization": {
+      "entry": "src/pages/organization/main.js",
+      "template": "public/organization.html",
+      "filename": "organization.html"
     }
   },
 }
