@@ -16,7 +16,7 @@
                     <v-toolbar-title><a href="/">【ロゴ】いわたタウンマネジメント</a></v-toolbar-title>
                     <v-spacer></v-spacer>
                     <v-toolbar-items>
-                        <v-btn text class="px-5 text-caption" href="../organization/Organization.vue">
+                        <v-btn text class="px-5 text-caption" href="/organization.html">
                             <div>
                                 <v-icon class="mb-3">mdi-account</v-icon>
                                 <v-spacer></v-spacer>
