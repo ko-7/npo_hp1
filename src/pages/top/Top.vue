@@ -1,50 +1,54 @@
 <template>
   <v-app>
     <!-- 背景全面を灰色にするためのcard -->
-    <v-card color="blue-grey lighten-5 text-caption" width="100%" height="100%" flat>
+    <!-- <v-card color="blue-grey lighten-5 text-caption pa-0 ma-0" width="100%" height="100%" flat> -->
     <!-- コンテンツとフッターのラッパー（サイズ調整用） -->
-    <v-content class="mx-0 my-5 px-0 py-4">
+    <v-content>
       <v-container>
         <v-row class="ma-0 pa-0" justify="center">
           <v-col cols="12" sm="10" md="10" lg="8" xl="6" class="mb-5 mx-0 pa-0">
             <!-- 以下コンテンツ(背景白部分の全体) -->
-            <v-card tile class="pa-5" width="100%" height="100%" flat>
+            <!-- <v-card tile width="100%" height="100%" flat> -->
                 <!-- ヘッダー -->
-                <p class="font-weight-medium mb-0">【➀一言メッセージ】</p>
+                <p class="font-weight-medium mb-0">【一言メッセージ】</p>
                 <v-divider color="#BDBDBD"></v-divider>
                 <v-app-bar color="white" flat class="my-5">
-                    <v-toolbar-title><a href="/">➁いわたタウンマネジメント</a></v-toolbar-title>
+                    <v-toolbar-title>
+                      <a href="/">
+                        【ロゴ】いわたタウンマネジメント
+                      </a>
+                    </v-toolbar-title>
                     <v-spacer></v-spacer>
                     <v-toolbar-items>
                         <v-btn text class="px-5 text-caption" href="../organization/Organization.vue">
                             <div>
                                 <v-icon class="mb-3">mdi-account</v-icon>
                                 <v-spacer></v-spacer>
-                                ➂組織
+                                組織
                             </div>
                         </v-btn>
-                        <v-btn text class="px-1 text-caption">
+                        <!-- <v-btn text class="px-1 text-caption">
                             <div>
                                 <v-icon class="mb-3">mdi-email</v-icon>
                                 <v-spacer></v-spacer>
-                                ➃お問い合わせ
+                                お問い合わせ
                             </div>
-                        </v-btn>
+                        </v-btn> -->
                     </v-toolbar-items>
                 </v-app-bar>
 
                 <br>
 
                 <!-- 画像スライド -->
-                <v-carousel class="my-5" hide-delimiter-background show-arrows-on-hover>
+                <v-responsive :aspect-ration="1.7">
+                  <v-carousel cycle height="100%" width="100%" hide-delimiter-background :show-arrows="false">
                     <v-carousel-item
-                    v-for="(item,i) in items"
-                    :key="i"
-                    :src="item.src"
-                    reverse-transition="fade-transition"
-                    transition="fade-transition"
-                ></v-carousel-item>
-                </v-carousel>
+                      v-for="(item,i) in items"
+                      :key="i"
+                      :src="item.src"
+                    ></v-carousel-item>
+                  </v-carousel>
+                </v-responsive>
 
                 <!-- 活動内容紹介 -->
                 <v-card flat class="my-5">
@@ -67,19 +71,21 @@
 
                 <!-- フッター -->
                 <v-divider class="mt-5" color="#BDBDBD"></v-divider>
-                <v-footer color="white text-center">
-                  <v-toolbar-item class="justify-center">
-                    メール： npo@npo.com | 
-                    電話番号：012-1234-1234
-                  </v-toolbar-item>
+                <v-footer color="white text-center ma-0 pa-0">
+                  <v-container class="ma-0 pa-0">
+                    <v-row class="ma-0 pa-0">
+                      <v-col cols="12" md="4" lg="3" class="ma-0 pa-0" align="left">メール： npo@npo.com</v-col>
+                      <v-col cols="12" md="4" lg="3" class="ma-0 pa-0" align="left">電話番号：012-1234-1234</v-col>
+                    </v-row>
+                  </v-container>
                 </v-footer>
 
-            </v-card>
+            <!-- </v-card> -->
           </v-col>
         </v-row>
       </v-container>
     </v-content>
-    </v-card>
+    <!-- </v-card> -->
   </v-app>
 </template>
 
