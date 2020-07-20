@@ -47,7 +47,6 @@
                   <v-divider color="#BDBDBD"></v-divider>
                   <h4 class="mb-1"></h4>
                   <p class="mb-0">磐田市内の生活者、商店、企業、行政、他各種団体に対して、中心市街地と郊外市街地の連携と地域の個人・組織の枠を超えた人財の融合によるタウンマネジメントに関する事業を行い、先人が培ってきた歴史や文化、風土を最大限に活かし住みよい地域環境の創造と活力ある地域経済の発展に寄与することを目的とする。</p>
-                  
                 </v-card>
                 <v-card flat class="my-5">
                   <v-divider color="#BDBDBD"></v-divider>
@@ -68,6 +67,18 @@
                       2017年度事業報告書等
                     </a>
                   </p>
+                </v-card>
+                <v-card flat class="my-5">
+                  <v-divider color="#BDBDBD"></v-divider>
+                    <p class="my-1">活動実績</p>
+                  <v-divider color="#BDBDBD"></v-divider>
+                  <h4 class="mb-1"></h4>
+                  <p class="mb-3">1999年1月3日 第一回フリーマーケット</p>
+                  <p class="mb-3">2000年6月5日 第二回フリーマーケット</p>
+                  <p class="mb-3">2001年7月3日 第三回フリーマーケット</p>
+                  <p class="mb-3">2002年8月1日 第四回フリーマーケット</p>
+                  <p class="mb-3">2003年7月8日 第五回フリーマーケット</p>
+
                 </v-card>
 
                 <!-- フッター -->
