@@ -35,7 +35,7 @@
 
                 <!-- 画像スライド -->
                 <v-responsive :aspect-ration="1.7">
-                  <v-carousel continuous cycle height="100%" width="100%" hide-delimiter-background :show-arrows="false">
+                  <v-carousel continuous cycle width="100%" hide-delimiter-background :show-arrows="false">
                     <v-carousel-item
                       v-for="(item,i) in items"
                       :key="i"
