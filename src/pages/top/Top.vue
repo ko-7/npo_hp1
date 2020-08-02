@@ -15,7 +15,7 @@
                       </v-card>
                     </v-toolbar-title>
                     <v-spacer></v-spacer>
-                    <v-toolbar-items>
+                    <!-- <v-toolbar-items>
                         <v-btn text class="px-3 text-caption" href="/">
                             <div align="center">
                                 <v-icon class="mb-1" style="color:#FFD700;">mdi-home</v-icon>
@@ -30,7 +30,7 @@
                                 <p class="mb-0">方針</p>
                             </div>
                         </v-btn>
-                    </v-toolbar-items>
+                    </v-toolbar-items> -->
                 </v-app-bar>
 
                 <!-- 画像スライド -->
@@ -61,15 +61,38 @@
                   <p class="mb-0">●ビアガーデン</p>
                   <p class="mb-0">●ハロウィンパーティー</p>
                 </v-card>
-                <!-- <v-card flat class="my-5">
+                
+                <v-card flat class="my-5">
                   <v-divider color="#BDBDBD"></v-divider>
-                    <p class="my-1">今後の予定</p>
-                  <v-divider color="#BDBDBD"></v-divider>
-                  <h4 class="mb-1">空き家のリノベーション</h4>
-                  <p class="mb-0">ご自身が「暮らすため」あるいは「賃貸や売却で利益を得るため」といった理由から、空き家のリフォーム・リノベーションを検討する方が増えつつあります。「古い空き家を所有し続けることにより、固定資産税が高くなってしまわないか」と不安に思う方もいらっしゃるでしょう。とは言え、リフォームの際には工事費用がいくらかかるか、またどのような工事が必要か、心配な方もきっと多いはず。</p>
-                  <p>そこで、私たちいわたタウンマネジメントでそういった方々をサポートしたいと思っています。</p>
-                </v-card> -->
+                    <p class="my-1">今後の活動目標</p>
+                  <v-divider color="#BDBDBD" class="mb-3"></v-divider>
+                  <h4 class="mb-1">磐田の未来創造へ！！</h4>
+                  <p class="mb-0">●学生と店舗、起業とのコラボ</p>
+                  <p class="mb-0">●まちづくりの勉強会</p>
+                  <p class="mb-0">●市民からのイベント提案</p>
+                </v-card>
 
+                <!-- 組織紹介 -->
+                <v-card flat class="my-5">
+                  <v-divider color="#BDBDBD"></v-divider>
+                    <p class="my-1">定款・事業報告書</p>
+                  <v-divider color="#BDBDBD" class="mb-3"></v-divider>
+                  <p class="mb-0">
+                    <a href="https://www.npo-homepage.go.jp/npoportal/document/022000922/teikan/1/%E5%AE%9A%E6%AC%BE.pdf" target="_blank">
+                      定款＿特定非営利活動法人いわたタウンマネジメント
+                    </a>
+                  </p>
+                  <p class="my-3">
+                    <a href="https://www.npo-homepage.go.jp/npoportal/document/022000922/hokoku/201870/2018%E5%B9%B4%E5%BA%A6%E4%BA%8B%E6%A5%AD%E5%A0%B1%E5%91%8A%E6%9B%B8%E7%AD%89.pdf" target="_blank">
+                      2018年度事業報告書等
+                    </a>
+                  </p>
+                  <p>
+                    <a href="https://www.npo-homepage.go.jp/npoportal/document/022000922/hokoku/201770/2017%E5%B9%B4%E5%BA%A6%E4%BA%8B%E6%A5%AD%E5%A0%B1%E5%91%8A%E6%9B%B8%E7%AD%89.pdf" target="_blank">
+                      2017年度事業報告書等
+                    </a>
+                  </p>
+                </v-card>
 
                 <!-- フッター -->
                 <v-divider class="mt-5" color="#BDBDBD"></v-divider>
