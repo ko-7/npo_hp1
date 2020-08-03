@@ -34,15 +34,19 @@
                 </v-app-bar>
 
                 <!-- 画像スライド -->
-                <v-responsive :aspect-ration="1.7">
-                  <v-carousel continuous cycle width="100%" hide-delimiter-background :show-arrows="false">
-                    <v-carousel-item
-                      v-for="(item,i) in items"
-                      :key="i"
-                      :src="item.src"
-                    ></v-carousel-item>
-                  </v-carousel>
-                </v-responsive>
+                <div>
+                  <v-card tile>
+                    <v-responsive :aspect-ratio="16/9">
+                      <v-carousel continuous cycle width="100%" height="100%" hide-delimiter-background :show-arrows="false">
+                        <v-carousel-item
+                          v-for="(item,i) in items"
+                          :key="i"
+                          :src="item.src"
+                        ></v-carousel-item>
+                      </v-carousel>
+                    </v-responsive>
+                  </v-card>
+                </div>
 
                 <!-- 組織紹介 -->
                 <v-card flat class="my-5">
