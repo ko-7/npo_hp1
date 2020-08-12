@@ -1,6 +1,6 @@
-// Organization main.js
+// Contact main.js
 import Vue from 'vue';
-import Organization from './Organization.vue';
+import Contact from './Contact.vue';
 import vuetify from '@/plugins/vuetify';
 
 import Amplify, * as AmplifyModules from 'aws-amplify' // 追記
@@ -14,5 +14,5 @@ Vue.config.productionTip = false;
 
 new Vue({
   vuetify,
-  render: h => h(Organization),
+  render: h => h(Contact),
 }).$mount('#app');
