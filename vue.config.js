@@ -26,11 +26,11 @@ module.exports = {
     }
   },
 
-  configureWebpack: {
-    devServer: {
-      watchOptions: {
-        poll: true
-      }
-    }
-  },
+  // configureWebpack: {
+  //   devServer: {
+  //     watchOptions: {
+  //       poll: true
+  //     }
+  //   }
+  // },
 }

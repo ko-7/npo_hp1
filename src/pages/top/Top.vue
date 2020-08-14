@@ -105,7 +105,7 @@
                     <v-row class="ma-0 pa-0 d-flex space-between">
                       <!-- <v-col cols="12" md="4" lg="3" class="ma-0 pa-0" align="left">メール： npo@npo.com</v-col> -->
                       <!-- <v-col cols="12" md="4" lg="3" class="ma-0 pa-0" align="left">電話番号：012-1234-1234</v-col> -->
-                      <v-col><v-btn depressed large outlined class="my-3" color="orange">お問い合わせ</v-btn></v-col>
+                      <v-col><v-btn depressed large outlined class="my-3" color="orange" href="/contact">お問い合わせ</v-btn></v-col>
                     </v-row>
                   </v-container>
                 </v-footer>
