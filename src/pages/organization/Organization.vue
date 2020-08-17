@@ -92,6 +92,13 @@
   export default {
     data: () => ({
       language: null,
+      model: null,
+      multiple: false,
+      mandatory: false,
+      showArrows: true,
+      prevIcon: false,
+      nextIcon: false,
+      centerActive: false,
     }),
   }
 </script>

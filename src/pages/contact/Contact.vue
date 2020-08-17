@@ -26,16 +26,20 @@
                   <v-divider color="#BDBDBD"></v-divider>
                     <p class="my-1">お問い合わせフォーム</p>
                   <v-divider color="#BDBDBD" class="mb-3"></v-divider>
+
+                  <form id="submit_form">
                   <v-col cols="12" sm="6" class="mb-0">
                     <v-text-field
                       label="お名前[任意]"
                       placeholder=" "
+                      v-model="name"
                     ></v-text-field>
                   </v-col>
                   <v-col cols="12" sm="6">
                     <v-text-field
                       label="メールアドレス[必須]"
                       placeholder=" "
+                      v-model="email"
                     ></v-text-field>
                   </v-col>
                   <v-col cols="10">
@@ -46,9 +50,11 @@
                       outlined
                       rows="10"
                       row-height="15"
+                      v-model="content"
                     ></v-textarea>
                   </v-col>
-                  <v-btn depressed small color="primary" href="#">送信</v-btn>
+                  <v-btn depressed small color="primary" id="submit_button" @click="sendmail()">送信</v-btn>
+                  </form>
                 </v-card>
 
                 <!-- フッター -->
@@ -56,8 +62,8 @@
                 <v-footer color="white text-center">
                   <v-container class="ma-0 pa-0">
                     <v-row class="ma-0 pa-0">
-                      <v-col cols="12" md="5" lg="4" class="ma-0 pa-0" align="left">メール： npo@npo.com</v-col>
-                      <v-col cols="12" md="5" lg="4" class="ma-0 pa-0" align="left">電話番号：012-1234-1234</v-col>
+                      <!-- <v-col cols="12" md="5" lg="4" class="ma-0 pa-0" align="left">メール： npo@npo.com</v-col> -->
+                      <!-- <v-col cols="12" md="5" lg="4" class="ma-0 pa-0" align="left">電話番号：012-1234-1234</v-col> -->
                     </v-row>
                   </v-container>
                 </v-footer>
@@ -70,9 +76,28 @@
 </template>
 
 <script>
+  // import axios from "axios"
   export default {
     data: () => ({
       language: null,
+      name: null,
+      email: null,
+      content: null,
     }),
+    methods: {
+      sendmail(){
+        const apiUrl = "https://niz8sva5w6.execute-api.ap-northeast-1.amazonaws.com/v1/sendmail"
+        const params = {
+          name: this.name,
+          email: this.email,
+          content: this.content,
+        }
+        this.$axios.post(apiUrl, params).then(response => {
+          console.log(response)
+        }).catch(error => {
+          console.log(error)
+        })
+      },
+    },
   }
 </script>
