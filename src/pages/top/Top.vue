@@ -120,7 +120,6 @@
 <script>
   export default {
     data: () => ({
-      language: null,
     //↓ スライドに表示させる画像のパス
       items: [
           {
