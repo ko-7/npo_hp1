@@ -8,19 +8,19 @@
 
             <!-- ヘッダー -->
             <p class="font-weight-medium mb-0">いわたタウンマネジメント</p>
-            <v-divider color="#BDBDBD"></v-divider>
+            <v-divider color="#BDBDBD" />
             <v-app-bar color="white" flat class="my-3">
               <v-toolbar-title>
                 <v-card class="my-1" width="100%" tile flat href="/">
-                  <v-img src="@/assets/logo.jpg"></v-img>
+                  <v-img src="@/assets/logo.jpg" />
                 </v-card>
               </v-toolbar-title>
-              <v-spacer></v-spacer>
+              <v-spacer />
               <v-toolbar-items>
                 <v-btn text class="px-3 text-caption" href="/">
                   <div align="center">
                     <v-icon class="mb-1" style="color:#FFD700;">mdi-home</v-icon>
-                    <v-spacer></v-spacer>
+                    <v-spacer />
                     <p class="mb-0">TOP</p>
                   </div>
                 </v-btn>
@@ -29,14 +29,14 @@
                 
             <!-- 画像 -->
             <v-card class="my-5" width="100%" tile>
-              <v-img src="@/assets/organization.png"></v-img>
+              <v-img src="@/assets/organization.png" />
             </v-card>
 
             <!-- お問い合わせフォーム -->
             <v-card flat class="my-5">
-              <v-divider color="#BDBDBD"></v-divider>
+              <v-divider color="#BDBDBD" />
                 <p class="my-1">お問い合わせフォーム</p>
-              <v-divider color="#BDBDBD" class="mb-3"></v-divider>
+              <v-divider color="#BDBDBD" class="mb-3" />
 
               <v-form ref="submit_form">
                 <v-col cols="12" sm="6" class="mb-0">
@@ -44,7 +44,7 @@
                     label="お名前[任意]"
                     placeholder=" "
                     v-model="name"
-                  ></v-text-field>
+                  />
                 </v-col>
                 <v-col cols="12" sm="6">
                   <v-text-field
@@ -53,7 +53,7 @@
                     v-model="email"
                     :rules="emailRules"
                     required
-                  ></v-text-field>
+                  />
                 </v-col>
                 <v-col cols="12" sm="10">
                   <v-textarea
@@ -66,14 +66,14 @@
                     v-model="content"
                     :rules="contentRules"
                     required
-                  ></v-textarea>
+                  />
                 </v-col>
                 <v-btn depressed small color="primary" id="submit_button" @click="sendmail()">送信</v-btn>
               </v-form>
             </v-card>
 
             <!-- フッター -->
-            <v-divider class="mt-5" color="#BDBDBD"></v-divider>
+            <v-divider class="mt-5" color="#BDBDBD" />
             <v-footer color="white text-center">
               <v-container class="ma-0 pa-0">
                 <v-row class="ma-0 pa-0">
