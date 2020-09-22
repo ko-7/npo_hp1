@@ -9,11 +9,6 @@ module.exports = {
       "template": "public/index.html",
       "filename": "index.html"
     },
-    "organization": {
-      "entry": "src/pages/organization/main.js",
-      "template": "public/organization.html",
-      "filename": "organization.html"
-    },
     "contact":{
       "entry": "src/pages/contact/main.js",
       "template": "public/contact.html",

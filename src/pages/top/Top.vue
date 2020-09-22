@@ -23,13 +23,6 @@
                             <p class="mb-0">TOP</p>
                         </div>
                     </v-btn>
-                    <v-btn text class="px-3 text-caption" href="/organization.html">
-                        <div align="center">
-                            <v-icon class="mb-1">mdi-account</v-icon>
-                            <v-spacer></v-spacer>
-                            <p class="mb-0">方針</p>
-                        </div>
-                    </v-btn>
                 </v-toolbar-items> -->
             </v-app-bar>
 
@@ -76,7 +69,7 @@
               <p class="mb-0">●市民からのイベント提案</p>
             </v-card>
 
-            <!-- 組織紹介 -->
+            <!-- 定款・事業報告書 -->
             <v-card flat class="my-5">
               <v-divider color="#BDBDBD" />
                 <p class="my-1">定款・事業報告書</p>
