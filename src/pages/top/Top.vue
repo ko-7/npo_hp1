@@ -44,49 +44,45 @@
             <!-- 組織紹介 -->
             <v-card flat class="my-5">
               <v-divider color="#BDBDBD" />
-                <p class="my-1">いわたタウンマネジメントとは</p>
+                <p class="my-1" v-show="ContentVshow[10]">{{ Contents[10].name }}</p>
               <v-divider color="#BDBDBD" class="mb-3" />
-              <h4 class="mb-1"></h4>
-              <p class="mb-0">磐田市内の生活者、商店、企業、行政、他各種団体に対して、中心市街地と郊外市街地の連携と地域の個人・組織の枠を超えた人財の融合によるタウンマネジメントに関する事業を行い、先人が培ってきた歴史や文化、風土を最大限に活かし住みよい地域環境の創造と活力ある地域経済の発展に寄与することを目的とする。</p>
+              <!-- <h4 class="mb-1"></h4> -->
+              <p class="mb-0">{{ Contents[11].name }}</p>
             </v-card>
             <!-- 活動内容紹介 -->
             <v-card flat class="my-5">
               <v-divider color="#BDBDBD" />
-                <p class="my-1">活動内容</p>
+                <p class="my-1">{{ Contents[20].name }}</p>
               <v-divider color="#BDBDBD" class="mb-3" />
-              <p class="mb-0">●ウィークエンドマーケット</p>
-              <p class="mb-0">●ビアガーデン</p>
-              <p class="mb-0">●ハロウィンパーティー</p>
+              <p>{{ Contents[21].name }}</p>
             </v-card>
                 
             <v-card flat class="my-5">
               <v-divider color="#BDBDBD" />
-                <p class="my-1">今後の活動目標</p>
+                <p class="my-1">{{ Contents[30].name }}</p>
               <v-divider color="#BDBDBD" class="mb-3" />
-              <h4 class="mb-1">磐田の未来創造へ！！</h4>
-              <p class="mb-0">●学生と店舗、起業とのコラボ</p>
-              <p class="mb-0">●まちづくりの勉強会</p>
-              <p class="mb-0">●市民からのイベント提案</p>
+              <h4 class="mb-1">{{ Contents[31].name }}</h4>
+              <p>{{ Contents[32].name }}</p>
             </v-card>
 
             <!-- 定款・事業報告書 -->
             <v-card flat class="my-5">
               <v-divider color="#BDBDBD" />
-                <p class="my-1">定款・事業報告書</p>
+                <p class="my-1">{{ Contents[40].name }}</p>
               <v-divider color="#BDBDBD" class="mb-3" />
               <p class="mb-0">
-                <a href="https://www.npo-homepage.go.jp/npoportal/document/022000922/teikan/1/%E5%AE%9A%E6%AC%BE.pdf" target="_blank">
-                  定款＿特定非営利活動法人いわたタウンマネジメント
+                <a :href="Contents[42].name" target="_blank">
+                  {{ Contents[41].name }}
                 </a>
               </p>
               <p class="my-3">
-                <a href="https://www.npo-homepage.go.jp/npoportal/document/022000922/hokoku/201870/2018%E5%B9%B4%E5%BA%A6%E4%BA%8B%E6%A5%AD%E5%A0%B1%E5%91%8A%E6%9B%B8%E7%AD%89.pdf" target="_blank">
-                  2018年度事業報告書等
+                <a :href="Contents[44].name" target="_blank">
+                  {{ Contents[43].name }}
                 </a>
               </p>
               <p>
-                <a href="https://www.npo-homepage.go.jp/npoportal/document/022000922/hokoku/201770/2017%E5%B9%B4%E5%BA%A6%E4%BA%8B%E6%A5%AD%E5%A0%B1%E5%91%8A%E6%9B%B8%E7%AD%89.pdf" target="_blank">
-                  2017年度事業報告書等
+                <a :href="Contents[46].name" target="_blank">
+                  {{ Contents[45].name }}
                 </a>
               </p>
             </v-card>
@@ -96,8 +92,6 @@
             <v-footer color="white text-center ma-0 pa-0">
               <v-container class="ma-0 pa-0">
                 <v-row class="ma-0 pa-0 d-flex space-between">
-                  <!-- <v-col cols="12" md="4" lg="3" class="ma-0 pa-0" align="left">メール： npo@npo.com</v-col> -->
-                  <!-- <v-col cols="12" md="4" lg="3" class="ma-0 pa-0" align="left">電話番号：012-1234-1234</v-col> -->
                   <v-col><v-btn depressed large outlined class="my-3" color="orange" href="/contact">お問い合わせ</v-btn></v-col>
                 </v-row>
               </v-container>
@@ -111,8 +105,15 @@
 </template>
 
 <script>
+  import {API, graphqlOperation} from "aws-amplify"
+  import {listTodos} from "@/graphql/queries"
+  import _ from "lodash"
+
   export default {
     data: () => ({
+      Contents: [],
+      limit: 50,
+      ContentVshow: [],
     //↓ スライドに表示させる画像のパス
       items: [
           {
@@ -135,5 +136,27 @@
           },
       ],
     }),
+    mounted: function(){
+      this.setContents()
+    },
+    methods: {
+      setContents: async function(){
+        let Contents = await API.graphql(graphqlOperation(
+          listTodos, {limit: this.limit}
+        ))
+        this.Contents = _.orderBy(Contents.data.listTodos.items, 'id', 'asc').slice(0, 100)
+        for (let i=0; i<50; i++){
+          if (this.Contents[i].name === "") return
+           this.ContentVshow[i] = true
+        }
+      }
+    }
   }
 </script>
+
+<style scoped>
+  /* ↓↓textareaでの改行をpタグ内でも改行させる↓↓ */
+  p {
+    white-space: pre-wrap;
+  }
+</style>>

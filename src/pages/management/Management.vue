@@ -47,50 +47,30 @@
             <!-- 組織紹介 -->
             <v-card flat class="my-5">
               <v-divider color="#BDBDBD" />
-                  <!-- {{ Contents }} -->
-                  <v-textarea dense class="my-0 py-0" auto-grow rows="1" v-model="Contents[10].name" />
-                  <!-- <v-textarea dense class="my-0 py-0" auto-grow rows="1" v-model="Contents[0].name" v-show="ContentVshow[0]" /> -->
-              <!-- <v-divider color="#BDBDBD" class="mb-3" /> -->
-              <!-- <h4 class="mb-1"></h4> -->
-                  <v-textarea dense class="my-0 mx-3 py-0" auto-grow rows="1" v-model="Contents[11].name" />
-                  <!-- <v-textarea dense class="my-0 mx-3 py-0" auto-grow rows="1" v-model="Contents[12].name" :placeholder="Contents[12].name"></v-textarea> -->
-                  <!-- <v-textarea dense class="my-0 mx-3 py-0" auto-grow rows="1" v-model="Contents[13].name" :placeholder="Contents[13].name"></v-textarea> -->
-                  <!-- <v-btn small class="my-0 py-0" color="primary" v-on:click="ContentDelete(12)">×行を削除</v-btn> -->
-                  <!-- <v-btn small color="primary" v-show="!ContentVshow[12]" v-on:click="ContentAdd(12)">＋行を追加</v-btn> -->
+                <v-textarea dense class="my-0 py-0" auto-grow rows="1" v-model="Contents[10].name" />
+                <!-- <v-textarea dense class="my-0 py-0" auto-grow rows="1" v-model="Contents[0].name" v-show="ContentVshow[0]" /> -->
+                <v-textarea dense class="my-0 mx-3 py-0" auto-grow rows="1" v-model="Contents[11].name" />
             </v-card>
+
             <!-- 活動内容紹介 -->
             <v-card flat class="my-5">
               <v-divider color="#BDBDBD" />
                 <v-textarea dense class="my-0 py-0" auto-grow rows="1" v-model="Contents[20].name" />
-              <!-- <v-divider color="#BDBDBD" class="mb-3" /> -->
                 <v-textarea dense class="my-0 mx-3 py-0" auto-grow rows="1" v-model="Contents[21].name" />
-                <!-- <v-textarea dense class="my-0 mx-3 py-0" auto-grow rows="1" v-model="Contents[22].name" /> -->
-                <!-- <v-textarea dense class="my-0 mx-3 py-0" auto-grow rows="1" v-model="Contents[23].name" /> -->
-              <!-- <p class="mb-0">●ウィークエンドマーケット</p> -->
-              <!-- <p class="mb-0">●ビアガーデン</p> -->
-              <!-- <p class="mb-0">●ハロウィンパーティー</p> -->
             </v-card>
 
+            <!-- 今後の活動目標 -->
             <v-card flat class="my-5">
               <v-divider color="#BDBDBD" />
                 <v-textarea dense class="my-0 py-0" auto-grow rows="1" v-model="Contents[30].name" />
-                <!-- <p class="my-1">今後の活動目標</p> -->
-              <!-- <v-divider color="#BDBDBD" class="mb-3" /> -->
                 <h1><v-textarea dense class="my-0 mx-3 py-0" auto-grow rows="1" v-model="Contents[31].name" /></h1>
                 <v-textarea dense class="my-0 mx-3 py-0" auto-grow rows="1" v-model="Contents[32].name" />
-                <!-- <v-textarea dense class="my-0 mx-3 py-0" auto-grow rows="1" v-model="Contents[33].name" /> -->
-              <!-- <h4 class="mb-1">磐田の未来創造へ！！</h4> -->
-              <!-- <p class="mb-0">●学生と店舗、起業とのコラボ</p> -->
-              <!-- <p class="mb-0">●まちづくりの勉強会</p> -->
-              <!-- <p class="mb-0">●市民からのイベント提案</p> -->
             </v-card>
 
             <!-- 定款・事業報告書 -->
             <v-card flat class="my-5">
               <v-divider color="#BDBDBD" />
                 <v-textarea dense class="my-0 py-0" auto-grow rows="1" v-model="Contents[40].name" />
-                <!-- <p class="my-1">定款・事業報告書</p> -->
-              <!-- <v-divider color="#BDBDBD" class="mb-3" /> -->
               <v-card-actions class="my-0 py-0">
                 <p>➀表示：</p>
                 <v-textarea dense class="my-0 py-0" auto-grow rows="1" v-model="Contents[41].name" />
@@ -99,37 +79,22 @@
                 <p>➀URL：</p>
                 <v-textarea dense class="my-0 py-0" auto-grow rows="1" v-model="Contents[42].name" />
               </v-card-actions>
-              <v-card-actions class="my-0 py-0">
+              <v-card-actions class="my-0 pt-5 pb-0">
                 <p>➁表示：</p>
-                <v-textarea dense class="my-0 pt-5 pb-0" auto-grow rows="1" v-model="Contents[43].name" />
+                <v-textarea dense class="my-0 py-0" auto-grow rows="1" v-model="Contents[43].name" />
               </v-card-actions>
               <v-card-actions class="my-0 pt-0 pb-5">
                 <p>➁URL：</p>
                 <v-textarea dense class="my-0 py-0" auto-grow rows="1" v-model="Contents[44].name" />
               </v-card-actions>
-              <v-card-actions class="my-0 py-0">
+              <v-card-actions class="my-0 pt-5 pb-0">
                 <p>➂表示：</p>
-                <v-textarea dense class="my-0 pt-5 pb-0" auto-grow rows="1" v-model="Contents[45].name" />
+                <v-textarea dense class="my-0 py-0" auto-grow rows="1" v-model="Contents[45].name" />
               </v-card-actions>
               <v-card-actions class="my-0 py-0">
                 <p>➂URL：</p>
                 <v-textarea dense class="my-0 py-0" auto-grow rows="1" v-model="Contents[46].name" />
               </v-card-actions>
-              <!-- <p class="mb-0">
-                <a href="https://www.npo-homepage.go.jp/npoportal/document/022000922/teikan/1/%E5%AE%9A%E6%AC%BE.pdf" target="_blank">
-                  定款＿特定非営利活動法人いわたタウンマネジメント
-                </a>
-              </p>
-              <p class="my-3">
-                <a href="https://www.npo-homepage.go.jp/npoportal/document/022000922/hokoku/201870/2018%E5%B9%B4%E5%BA%A6%E4%BA%8B%E6%A5%AD%E5%A0%B1%E5%91%8A%E6%9B%B8%E7%AD%89.pdf" target="_blank">
-                  2018年度事業報告書等
-                </a>
-              </p>
-              <p>
-                <a href="https://www.npo-homepage.go.jp/npoportal/document/022000922/hokoku/201770/2017%E5%B9%B4%E5%BA%A6%E4%BA%8B%E6%A5%AD%E5%A0%B1%E5%91%8A%E6%9B%B8%E7%AD%89.pdf" target="_blank">
-                  2017年度事業報告書等
-                </a>
-              </p> -->
             </v-card>
 
             <!-- フッター -->
@@ -138,7 +103,7 @@
               <v-container class="ma-0 pa-0">
                 <v-row class="ma-0 pa-0 d-flex space-between">
                   <v-col col="3"><v-btn width="50%" depressed large outlined class="ma-5" color="orange" v-on:click="updateTodo()">変更を保存</v-btn></v-col>
-                  <v-col col="3"><v-btn width="50%" depressed large outlined class="ma-5" color="orange" v-on:click="setNowContents()">変更をリセット</v-btn></v-col>
+                  <v-col col="3"><v-btn width="50%" depressed large outlined class="ma-5" color="orange" v-on:click="setContents()">変更をリセット</v-btn></v-col>
                   <!-- <v-col col="3"><v-btn width="50%" depressed large outlined class="ma-5" color="orange" v-on:click="CreateTodo()">連続CREATE</v-btn></v-col> -->
                 </v-row>
               </v-container>
@@ -190,11 +155,11 @@
     }),
     // ページ読み込みの最初に実行する関数 created? mounted?
     mounted: function(){
-      this.setNowContents()
+      this.setContents()
     },
     methods: {
       // DynamoDBのデータを画面に表示
-      setNowContents: async function(){
+      setContents: async function(){
         let Contents = await API.graphql(graphqlOperation(
           listTodos, {limit: this.limit}
         ))
